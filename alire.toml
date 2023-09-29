@@ -7,9 +7,6 @@ maintainers = ["Olivier Henley <olivier.henley@gmail.com>"]
 maintainers-logins = ["ohenley"]
 
 [configuration.variables]
-
-device = { type = "Enum", values = ["stm32f40x", "stm32f42x", "stm32f46_79x", "stm32f7x", "stm32f7x9"], default = "stm32f7x" }
-
 adc = { type = "Enum", values = ["yes", "no"], default = "yes" }
 dac = { type = "Enum", values = ["yes", "no"], default = "yes" }
 dcmi = { type = "Enum", values = ["yes", "no"], default = "yes" }
@@ -27,7 +24,7 @@ ltdc = { type = "Enum", values = ["yes", "no"], default = "yes" }
 power_control = { type = "Enum", values = ["yes", "no"], default = "yes" }
 pwm = { type = "Enum", values = ["yes", "no"], default = "no" }
 sai = { type = "Enum", values = ["yes", "no"], default = "no" }
-sd = { type = "Enum", values = ["yes", "no"], default = "no" }
+#sd = { type = "Enum", values = ["yes", "no"], default = "no" }
 rcc = { type = "Enum", values = ["yes", "no"], default = "yes" }
 rng = { type = "Enum", values = ["yes", "no"], default = "yes" }
 rtc = { type = "Enum", values = ["yes", "no"], default = "yes" }
@@ -35,13 +32,6 @@ spi = { type = "Enum", values = ["yes", "no"], default = "yes" }
 syscfg = { type = "Enum", values = ["yes", "no"], default = "yes" }
 timers = { type = "Enum", values = ["yes", "no"], default = "yes" }
 wwdg = { type = "Enum", values = ["yes", "no"], default = "yes" }
-
-
-
-
-
-
-
 
 [[depends-on]]
 bare_types = "0.1.0-dev"

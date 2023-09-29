@@ -1,4 +1,5 @@
 with "config/bare_drivers_config.gpr";
+with "config/bare_core_config.gpr";
 with "config/bare_svd_config.gpr";
 project Bare_Drivers is
 
@@ -51,8 +52,8 @@ project Bare_Drivers is
       when "yes" =>
          Src_Dirs := Src_Dirs & ("src/i2c/" &
                                  Bare_Svd_Config.FAMILY & "/" &
-                                 Bare_Svd_Config.CORE_TYPE & "/" &
-                                 Bare_Svd_Config.CORE);
+                                 Bare_Core_Config.CORE_TYPE & "/" &
+                                 Bare_Core_Config.CORE);
    end case;
    case Bare_Drivers_Config.I2S is
       when "yes" =>
@@ -70,8 +71,8 @@ project Bare_Drivers is
       when "yes" =>
          Src_Dirs := Src_Dirs & ("src/power_control/" &
                                  Bare_Svd_Config.FAMILY & "/" &
-                                 Bare_Svd_Config.CORE_TYPE & "/" &
-                                 Bare_Svd_Config.CORE);
+                                 Bare_Core_Config.CORE_TYPE & "/" &
+                                 Bare_Core_Config.CORE);
    end case;
    case Bare_Drivers_Config.PWM is
       when "yes" =>
@@ -81,8 +82,8 @@ project Bare_Drivers is
       when "yes" =>
          Src_Dirs := Src_Dirs & ("src/rcc/" &
                                  Bare_Svd_Config.FAMILY & "/" &
-                                 Bare_Svd_Config.CORE_TYPE & "/" &
-                                 Bare_Svd_Config.CORE);
+                                 Bare_Core_Config.CORE_TYPE & "/" &
+                                 Bare_Core_Config.CORE);
    end case;
    case Bare_Drivers_Config.RNG is
       when "yes" =>
@@ -96,12 +97,12 @@ project Bare_Drivers is
       when "yes" =>
          Src_Dirs := Src_Dirs & ("src/sai/" & Bare_Svd_Config.FAMILY);
    end case;
-   case Bare_Drivers_Config.SD is
-      when "yes" =>
-         Src_Dirs := Src_Dirs & 
-         ("src/sd/" & Bare_Svd_Config.FAMILY,
-          "src/sd/" & Bare_Svd_Config.FAMILY & "/" & Bare_Drivers_Config.DEVICE);
-   end case;
+   -- case Bare_Drivers_Config.SD is
+   --    when "yes" =>
+   --       Src_Dirs := Src_Dirs & 
+   --       ("src/sd/" & Bare_Svd_Config.FAMILY,
+   --        "src/sd/" & Bare_Svd_Config.FAMILY & "/" & Bare_Drivers_Config.DEVICE);
+   -- end case;
    case Bare_Drivers_Config.SPI is
       when "yes" =>
          Src_Dirs := Src_Dirs & ("src/spi/" & Bare_Svd_Config.FAMILY);
