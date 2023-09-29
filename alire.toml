@@ -1,0 +1,50 @@
+name = "bare_drivers"
+description = "Shiny new project"
+version = "0.1.0-dev"
+
+authors = ["Olivier Henley"]
+maintainers = ["Olivier Henley <olivier.henley@gmail.com>"]
+maintainers-logins = ["ohenley"]
+
+[configuration.variables]
+
+device = { type = "Enum", values = ["stm32f40x", "stm32f42x", "stm32f46_79x", "stm32f7x", "stm32f7x9"], default = "stm32f7x" }
+
+adc = { type = "Enum", values = ["yes", "no"], default = "yes" }
+dac = { type = "Enum", values = ["yes", "no"], default = "yes" }
+dcmi = { type = "Enum", values = ["yes", "no"], default = "yes" }
+device_id = { type = "Enum", values = ["yes", "no"], default = "yes" }
+dma = { type = "Enum", values = ["yes", "no"], default = "yes" }
+dma2d = { type = "Enum", values = ["yes", "no"], default = "yes" }
+eth = { type = "Enum", values = ["yes", "no"], default = "no" }
+exti = { type = "Enum", values = ["yes", "no"], default = "yes" }
+fmc = { type = "Enum", values = ["yes", "no"], default = "yes" }
+gpio = { type = "Enum", values = ["yes", "no"], default = "yes" }
+i2s = { type = "Enum", values = ["yes", "no"], default = "yes" }
+i2c = { type = "Enum", values = ["yes", "no"], default = "yes" }
+iwdg = { type = "Enum", values = ["yes", "no"], default = "yes" }
+ltdc = { type = "Enum", values = ["yes", "no"], default = "yes" }
+power_control = { type = "Enum", values = ["yes", "no"], default = "yes" }
+pwm = { type = "Enum", values = ["yes", "no"], default = "no" }
+sai = { type = "Enum", values = ["yes", "no"], default = "no" }
+sd = { type = "Enum", values = ["yes", "no"], default = "no" }
+rcc = { type = "Enum", values = ["yes", "no"], default = "yes" }
+rng = { type = "Enum", values = ["yes", "no"], default = "yes" }
+rtc = { type = "Enum", values = ["yes", "no"], default = "yes" }
+spi = { type = "Enum", values = ["yes", "no"], default = "yes" }
+syscfg = { type = "Enum", values = ["yes", "no"], default = "yes" }
+timers = { type = "Enum", values = ["yes", "no"], default = "yes" }
+wwdg = { type = "Enum", values = ["yes", "no"], default = "yes" }
+
+
+
+
+
+
+
+
+[[depends-on]]
+bare_types = "0.1.0-dev"
+bare_core = "0.1.0-dev"
+bare_svd = "0.1.0-dev"
+bare_hal = "0.1.0-dev"
