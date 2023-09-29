@@ -49,7 +49,10 @@ project Bare_Drivers is
    end case;
    case Bare_Drivers_Config.I2C is
       when "yes" =>
-         Src_Dirs := Src_Dirs & ("src/i2c/" & Bare_Svd_Config.FAMILY);
+         Src_Dirs := Src_Dirs & ("src/i2c/" &
+                                 Bare_Svd_Config.FAMILY & "/" &
+                                 Bare_Svd_Config.CORE_TYPE & "/" &
+                                 Bare_Svd_Config.CORE);
    end case;
    case Bare_Drivers_Config.I2S is
       when "yes" =>
