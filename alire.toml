@@ -24,6 +24,7 @@ ltdc = { type = "Enum", values = ["yes", "no"], default = "yes" }
 power_control = { type = "Enum", values = ["yes", "no"], default = "yes" }
 pwm = { type = "Enum", values = ["yes", "no"], default = "no" }
 sai = { type = "Enum", values = ["yes", "no"], default = "no" }
+sdram = { type = "Enum", values = ["yes", "no"], default = "yes" }
 #sd = { type = "Enum", values = ["yes", "no"], default = "no" }
 rcc = { type = "Enum", values = ["yes", "no"], default = "yes" }
 rng = { type = "Enum", values = ["yes", "no"], default = "yes" }

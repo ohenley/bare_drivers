@@ -103,6 +103,10 @@ project Bare_Drivers is
    --       ("src/sd/" & Bare_Svd_Config.FAMILY,
    --        "src/sd/" & Bare_Svd_Config.FAMILY & "/" & Bare_Drivers_Config.DEVICE);
    -- end case;
+   case Bare_Drivers_Config.SDRAM is
+      when "yes" =>
+         Src_Dirs := Src_Dirs & ("src/sdram/" & Bare_Svd_Config.FAMILY);
+   end case;
    case Bare_Drivers_Config.SPI is
       when "yes" =>
          Src_Dirs := Src_Dirs & ("src/spi/" & Bare_Svd_Config.FAMILY);
